@@ -1,0 +1,110 @@
+/* Make the container as 2 layer grid */
+.container
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* image with width of 300px */
+img
+{
+    aspect-ratio: 3 / 2;
+    max-width: 300px;
+}
+
+/* transaction section */
+ul
+{
+    border: 1px solid rgb(225, 225, 218);
+    border-radius: 10px;
+    list-style: none;
+    padding: 20px;
+}
+
+/* individual field in transaction section */
+li
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgb(223, 223, 221);
+}
+
+li:last-child
+{
+    border-bottom: none;
+}
+
+/* company title */
+.title
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+/* Product groups with automatic column creation in grid */
+.products
+{
+    margin: 75px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+/* Individual product from product group */
+.product
+{
+    margin: 15px;
+    text-align: center;
+    border: 1px solid rgb(220, 219, 219);
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    box-shadow: 5px 5px 20px rgb(230, 230, 230);
+    border-radius: 5px;
+}
+
+.product:hover
+{
+    box-shadow: 5px 5px 20px rgb(210, 210, 210);
+}
+
+/* Description of the product */
+.product-description
+{
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* transaction area */
+.transaction-section
+{ 
+    width: 350px;
+}
+
+/* transaction section's heading */
+.transaction-section > h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    .container
+    {
+        display: block;
+    }
+
+    .products
+    {
+        margin: 0px;
+    }
+
+    .transaction-section
+    {
+        margin: 15px;
+        max-width: 350px;
+    }
+}

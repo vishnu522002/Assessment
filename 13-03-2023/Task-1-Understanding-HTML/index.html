@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policybazaar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Company Name -->
+    <h2 class="company-title">Policybazaar</h2>
+
+    <!-- Video Section -->
+    <section class="products">
+      <!-- Main Video -->
+      <div class="main-product">
+        <video src="./videos/adclip.mp4" autoplay muted controls></video>
+        <h2>01.Travel your life without worries</h2>
+      </div>
+
+      <!-- Video list on right side -->
+      <ul>
+        <li class="active">
+          <video src="./videos/adclip.mp4"></video>
+          <h4>01.Travel your life without worries</h4>
+        </li>
+        <li>
+          <video src="./videos/ad-1.mp4"></video>
+          <h4>02.Health Insurance</h4>
+        </li>
+        <li>
+          <video src="./videos/ad-2.mp4"></video>
+          <h4>03.Term Life Insurance</h4>
+        </li>
+        <li>
+          <video src="./videos/ad-3.mp4"></video>
+          <h4>04.Car Insurance</h4>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Scripts for video change when clicking any video in the video list -->
+    <script>
+      let mainVideo = document.querySelector(".main-product");
+      let videos = document.getElementsByTagName("li");
+      let videoList = [...videos];
+
+      videoList.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          let clickedElement = e.target.parentElement;
+          let oldActiveElement = document.querySelector(".active");
+          oldActiveElement.classList.remove("active");
+          clickedElement.classList.add("active");
+          changeVideo(clickedElement);
+        });
+      });
+
+      function changeVideo(element) {
+        let newSrc = element.children[0].src;
+        mainVideo.children[0].src = newSrc;
+
+        let newTitle = element.children[1];
+        mainVideo.children[1].innerText = newTitle.innerText;
+      }
+    </script>
+  </body>
+</html>

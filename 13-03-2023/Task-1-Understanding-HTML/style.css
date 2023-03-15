@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(235, 237, 238);
+}
+
+video {
+    aspect-ratio: 16/9;
+}
+
+/* total video list */
+ul {
+    width: 100%;
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow-y: scroll;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px 5px rgb(217, 215, 215);
+}
+
+/* css for all individual video-list */
+ul li {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid rgb(196, 190, 190);
+    line-height: 25px;
+    cursor: pointer;
+}
+
+/* focusing only videos in the list */
+ul li video {
+    width: 50%;
+    border-radius: 5px;
+}
+
+/* used to highlight when clicking the any videos from video list */
+.active {
+    background-color: rgb(235, 235, 235);
+}
+
+/* Title of the Company */
+.company-title
+{
+    text-align: center;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+/* Total video section */
+.products
+{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 75%;
+    margin: auto;
+    column-gap: 50px;
+    align-items: center;
+}
+
+/* main video */
+.main-product
+{ 
+    width: 100%;
+    height: 75%;
+    box-shadow: 5px 5px 25px 5px rgb(182, 180, 180);
+}
+
+.main-product video
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* video list's first child */
+ul li:first-child {
+    margin-top: 0;
+}
+
+/* video list's last child */
+ul li:last-child {
+    border: none;
+}
+
+/* applies to video list when hovering */
+ul li:hover
+{
+    background-color: rgb(240, 240, 240);
+}
+
+/* for mobile screen which has maximum length of 768px */
+@media only screen and (max-width: 768px) {
+    .products{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    ul li h3{
+        margin: 10px;
+    }
+}
+
+/* for medium screens like tabs*/
+@media only screen and (max-width: 991px) {
+    .products {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+}

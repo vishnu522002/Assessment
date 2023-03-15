@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    font-family: Verdana, Tahoma, sans-serif;
+    height: 100%;
+}
+
+/* title */
+h1
+{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px;
+}
+
+/* for total form */
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container for all inputs that shows at the center of screen */
+.form-container
+{
+    width: 40%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(245, 245, 245);
+    padding: 25px;
+}
+
+/* css for all input tags */
+input
+{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    float: right;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 3px;
+    border: 1px solid rgb(160, 160, 160);
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* css for all labels and including radio-label(span)*/
+label, .radio-label
+{
+    font-size: 20px;
+    
+}
+
+/* css for only input with type radio */
+input[type="radio"]
+{
+    float: none;
+    width: 5%;
+    height: 1rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* label inside the radio group */
+.radio-buttons > label
+{
+    font-size: 18px;
+}
+
+/* textarea for address section */
+textarea
+{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    float: right;
+    width: 100%;
+    resize: none;
+    border-radius: 3px;
+    border: 1px solid rgb(141, 140, 140);
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* select for account type section */
+select
+{
+    width: 100%;
+    height: 2rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* submit button */
+button
+{
+    width: 40%;
+    height: 2.5rem;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(1, 35, 36);
+    color: aliceblue;
+    font-size: 18px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+/* for small screens like mobile */
+@media screen and (max-width: 768px) {
+    form
+    {
+        height: 100%;
+    }
+
+    .form-container
+    {
+        width: 100%;
+    }
+}
+

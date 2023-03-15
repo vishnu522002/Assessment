@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Helps to turn off the scroll function of input[type='number'] */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title -->
+    <h1>KYC Form</h1>
+    <form>
+      <!-- container for all the inputs -->
+      <div class="form-container">
+        <!-- Name Section -->
+        <label
+          >Name:
+          <input type="text" name="name" required />
+        </label>
+        <!-- PAN Section-->
+        <label
+          >PAN:
+          <input type="number" name="pan" required />
+        </label>
+        <!-- Aadhaar section -->
+        <label
+          >Aadhaar:
+          <input type="number" name="aadhar" required />
+        </label>
+        <!-- Contact section -->
+        <label
+          >Contact:
+          <input type="number" name="contact" required />
+        </label>
+        <!-- Address section -->
+        <label
+          >Address:
+          <textarea name="address" cols="30" rows="10" required></textarea>
+        </label>
+        <!-- Radio section for choosing Gender -->
+        <div class="radio-buttons">
+          <p class="radio-label">Gender:</p>
+          <label>
+            <input type="radio" name="gender" value="male" checked />Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" />Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="other" />Other
+          </label>
+        </div>
+        <!-- Account type Select section -->
+        <label
+          >Type of Account:
+          <select>
+            <option value="savings">Savings</option>
+            <option value="current">Current</option>
+          </select>
+        </label>
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
