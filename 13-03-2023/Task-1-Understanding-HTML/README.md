@@ -4,6 +4,13 @@
 
 #### In this page, you can see how I created a video playlist like you can see on youtube playlist by step by step with html, css and Javascript. This is my beginner project, So maybe it has some mistakes in the code.
 
+# Table of Contents
+- [Step - 1 : Project setup](#step---1--project-setup)
+- [Step - 2 : Let's write HTML code](#step---2--lets-write-html-code)
+- [Step - 3 : Styling with CSS](#step---3--styling-with-css)
+- [Step - 4 : Let's write Javascript](#step---4--lets-write-javascript)
+- [Final Output](#final-output)
+
 # Step - 1 : Project setup
 
 Before moving on to the project, we need a IDE-Integrated development environment for a project. For this project, I use VS code. It is a popular development environment for HTML, CSS, Javascript and much more.
