@@ -428,4 +428,4 @@ button
 
 ## Final output:
 
-![KYC form final output](./final-output.
+![KYC form final output](./final-output.png)
