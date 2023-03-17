@@ -87,7 +87,7 @@ Example:
 
 ### Compute Income Tax based on slab
 Now we know how to find a net taxable income of a person. With net taxable income, we will find the tax slab rates and calculate it.
-Example-1: 
+- Example-1: 
   - In the before example, Raja has net taxable income of Rs 4,75,000.
   - He goes under slab of 5%.
   - Now, we need the divide the taxable amount to calculate
@@ -96,7 +96,7 @@ Example-1:
   - Now the tax amount, raja want to pay was Rs 11,250.
   - But According to Income Tax Act,the Rebate under Section 87A,If your net taxable income does not exceed Rs 5 lakh,we don't need to pay the tax.
 
-Example-2:
+- Example-2:
     - Ram has the net taxable income of Rs 12,00,000.
     - He goes under slabe of 30%.
     - Now, we need the divide the taxable amount to calculate
