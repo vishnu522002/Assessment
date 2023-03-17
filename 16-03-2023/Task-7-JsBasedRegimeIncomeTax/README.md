@@ -113,13 +113,13 @@ We can get the CESS tax by multiplying (0.04 * existing tax amount).
 
 # Step - 2 : Project setup
 
-Before moving on to the project, we need a IDE-Integrated development environment for a project. For this KYC project, I use VS code. It is a popular development environment for HTML, CSS, Javascript and much more.
+Before moving on to the project, we need a IDE-Integrated development environment for a project. For this project, I use VS code. It is a popular development environment for HTML, CSS, Javascript and much more.
 
 - Download and Install the VS code from the official site
 
   - VS code [download](https://code.visualstudio.com/download)
 
-- After Finishing the Environment setup, Then create a folder with the name as KYC-form(any name).
+- After Finishing the Environment setup, Then create a folder with the name as IncomeTaxCalculator(any name).
   In the folder, create a new file called index.html and index.js.
 
   - Why index.html? -> The index. html page is the most common name used for the default page shown on a website if no other page is specified when a visitor requests the site. In other words, index. html is the name used for the homepage of the website.
