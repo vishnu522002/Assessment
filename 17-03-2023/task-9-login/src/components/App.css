@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+.payment-card {
+    max-width: 500px;
+    margin: auto;
+    color: black;
+    background-color: rgb(226, 232, 237);
+    border-radius: 20 px;
+}
+
+.payment-container .h8 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.payment-form-control {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    height: 60px;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 600;
+}
