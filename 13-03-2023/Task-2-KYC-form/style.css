@@ -4,7 +4,7 @@
 
 body
 {
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background: linear-gradient(to right, #434343 0%, black 100%);
     font-family: Verdana, Tahoma, sans-serif;
     height: 100%;
 }
@@ -45,7 +45,7 @@ input
 {
     margin-top: 5px;
     margin-bottom: 25px;
-    float: right;
+    /* float: right; */
     width: 100%;
     height: 2.5rem;
     border-radius: 3px;
@@ -64,7 +64,7 @@ label, .radio-label
 /* css for only input with type radio */
 input[type="radio"]
 {
-    float: none;
+    /* float: none; */
     width: 5%;
     height: 1rem;
     margin-top: 5px;
@@ -82,7 +82,7 @@ textarea
 {
     margin-top: 5px;
     margin-bottom: 25px;
-    float: right;
+    /* float: right; */
     width: 100%;
     resize: none;
     border-radius: 3px;
@@ -118,10 +118,6 @@ button
 
 /* for small screens like mobile */
 @media screen and (max-width: 768px) {
-    form
-    {
-        height: 100%;
-    }
 
     .form-container
     {
