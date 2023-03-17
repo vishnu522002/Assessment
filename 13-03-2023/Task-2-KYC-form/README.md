@@ -2,7 +2,16 @@
 
 ### Simple KYC form with HTML and CSS
 
-#### In this page, you can see how I created a basic KYC form by step by step with html and css only. This is my beginner project, So sorry if there is any mistakes in the code. Ok now, let's see the form's requirement step by step.
+#### In this page, you can see how I created a basic KYC form by step by step with html and css only. This is my beginner project, So maybe it has some mistakes in the code. Ok now, let's see the form's requirement step by step.
+
+- # Table of Content
+  - [Step - 1 : Form structure](#step---1--form-structure)
+  - [Step - 2 : Project setup](#step---2--project-setup)
+  - [Step - 3 : Let's write HTML code](#step---3--lets-write-html-code)
+    - [Final HTML code](#final-html-code)
+  - [Step - 4 : Styling with CSS](#step---4--styling-with-css)
+      - [Breakdown the CSS in small parts](#breakdown-the-css-in-small-parts)
+  - [Final output](#final-output)
 
 ## Step - 1 : Form structure
 
@@ -141,7 +150,7 @@ These code is standard to creating a any HTML page. And the 'title' tag in the h
 
 - Above, we can see the 'label' tag with 'select' tag which has nested 'option' tags with values.It will act as select box.
 
-### Finally look like this:
+### Final HTML code
 
 ```
 <!DOCTYPE html>
@@ -426,6 +435,6 @@ button
 
 #### With this we are completing this project
 
-## Final output:
+## Final output
 
-![KYC form final output](./final-output.
+![KYC form final output](./final-output.png)
