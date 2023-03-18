@@ -1,6 +1,5 @@
 // To get Client details
 const name = document.getElementById("name");
-const profession = document.getElementById("profession");
 
 // To get Client Income Information
 const annualIncome = document.getElementById("annual-income");
@@ -32,6 +31,7 @@ function taxCalculator(taxableIncome) {
     document.body.innerHTML = `<div class="card col-lg-6 col-10 m-auto mt-5">
       <div class="card-header">Mr/Ms ${name.value}</div>
       <div class="card-body">
+          <p class="fs-4">According to slabs:</p>
           <p class="fs-4">You don't need to pay tax.</p>
       </div>
     </div>`;
@@ -43,7 +43,7 @@ function taxCalculator(taxableIncome) {
       <div class="card-header">Mr/Ms ${name.value}</div>
       <div class="card-body">
           <p class="fs-4">According to tax amount based on 5% slab:</p>
-          <p class="fs-4">You have to pay ${taxAmount}.</p>
+          <p class="fs-4">You have to pay Rs ${taxAmount}.</p>
           <p class="fs-5">But According to Income Tax Act,the Rebate under Section 87A, the amount less than 5,00,000 was refundable,if you are a resident individual, but not for an NRI, Hindu Undivided Family(HUF) and firms.</p>
       </div>
     </div>`;
@@ -57,9 +57,9 @@ function taxCalculator(taxableIncome) {
       <div class="card-body">
       <p class="fs-4">According to tax amount based on 20% slab:</p>
         <ul>
-          <li class="fs-4">Your tax amount is ${taxAmount}.</li>
-          <li class="fs-4">Plus 4% of CESS tax is ${taxAmount * 0.04}.</li>
-          <li class="fs-4">Total tax amount is ${
+          <li class="fs-4">Your tax amount is Rs ${taxAmount}.</li>
+          <li class="fs-4">Plus 4% of CESS tax is Rs ${taxAmount * 0.04}.</li>
+          <li class="fs-4">Total tax amount is Rs ${
             taxAmount * 0.04 + taxAmount
           }.</li>
         </ul>
@@ -77,9 +77,9 @@ function taxCalculator(taxableIncome) {
       <div class="card-body">
       <p class="fs-4">According to tax amount based on 30% slab.</p>
         <ul>
-          <li class="fs-4">Your tax amount is ${taxAmount}.</li>
-          <li class="fs-4">Plus 4% of CESS tax is ${taxAmount * 0.04}.</li>
-          <li class="fs-4">Total tax amount is ${
+          <li class="fs-4">Your tax amount is Rs ${taxAmount}.</li>
+          <li class="fs-4">Plus 4% of CESS tax is Rs ${taxAmount * 0.04}.</li>
+          <li class="fs-4">Total tax amount is Rs ${
             taxAmount * 0.04 + taxAmount
           }.</li>
         </ul>
