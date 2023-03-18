@@ -290,4 +290,4 @@ let videoList = [...videos];
 With this javascript code is completed.
 
 # Final Output
-![video playlist](final-output.png)
+![video playlist](./images/final-output.png)

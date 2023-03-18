@@ -32,13 +32,16 @@
 
  ### Slab
  Slab is a term used find the person's tax rates based on that person's Annual income.
- Slab rates:
- - Under Rs 2.5 lakh -> 0% of tax rate
- - Between Rs 2.5 lakh - Rs 5 lakh -> 5%
- - Between Rs 5 lakh - Rs 10 lakh -> 20%
- - More than 10 lakh -> 30%
+ #### Slab rates:
+
+ |  Income Tax slab               |   Tax Rate       |
+ | ------------------------------ |      :---:       |
+ | Under Rs 2.5 lakh              | Nil              |
+ | Between Rs 2.5 lakh - 5 lakh   | 5%               |
+ | Between Rs 5 lakh - Rs 10 lakh | 20%              |
+ | More than 10 lakh              | 30%              |
    
- #### Note
+ ##### Note
  We cannot calculate taxes above 50 lakh because the tax rate changes with surcharge.
  
 ### Exemptions
@@ -47,43 +50,43 @@ There are many type of exemptions in income tax.
 Here we will see only use HRA(House Rental Allowance) exemption for the calculator.
 
 Basically, When a person get a exemption in income tax that person can deduct the exemption amount in total income based on the govt rules.
-Example: 
-    - Raja has total income of Rs 3,00,000 per year.
-    - So, According to slab rate Rs 3,00,000 comes under the slab of 5% tax rate.
-    - But he got the HRA exemption of Rs 50,000.Then the total income - Rs 50,000(HRA exemption) = 2,50,000.
-    - Now he don't need to pay tax for coming under slab of 0% tax rate.
+#### Example: 
+- Raja has total income of Rs 3,00,000 per year.
+- So, According to slab rate Rs 3,00,000 comes under the slab of 5% tax rate.
+- But he got the HRA exemption of Rs 50,000.Then the total income - Rs 50,000(HRA exemption) = 2,50,000.
+- Now he don't need to pay tax for coming under slab of 0% tax rate.
 
 ### Deductions
-Deductions mean deduct or subtract the deduct amount and total income.
+Deductions mean deduct or subtract the given amount from total income.
 
 - In income tax, all individual can get the standard deduction = Rs 50,000
 - Also, if a person has savings like EPF and PPF savings in bank or any other services, that person can get maximum of Rs 1,50,000 deduction in total income.But if the EPF and PPF savings comes under 1,50,000 then the deduct amount will be same as current savings amount.
-Example: 
-    - Raja has total income of Rs 6,00,000.
-    - His current slab is 20% tax rate.
-    - But When he has the EPF and PPF savings of 2,00,000 and so, He get the maximum deduction of 1,50,000.
-    - And now he goes to slab rate of 5% tax rate.
-    - But if he has PPF and EPF savings of 50,000 then the amount will deducted also 50,000 not 1,50,000.
+#### Example: 
+- Raja has total income of Rs 6,00,000.
+- His current slab is 20% tax rate.
+- But When he has the EPF and PPF savings of 2,00,000 and so, He get the maximum deduction of 1,50,000.
+- And now he goes to slab rate of 5% tax rate.
+- But if he has PPF and EPF savings of 50,000 then the amount will deducted also 50,000 not 1,50,000.
 
 ## Calculation of Income Tax
 There are four steps involved when calculating tax.Let's see one by one:
 
 ### Identify Income from all sources
 Before, calculating the tax. we need to find the source of incomes.
-Example:
-    - Raja has Rs 4,00,000 annual salary.
-    - He also has income of Rs 50,000 come from interests in bank deposits.
-    - Now, His total income is Rs 4,50,000.
+#### Example:
+- Raja has Rs 4,00,000 annual salary.
+- He also has income of Rs 50,000 come from interests in bank deposits.
+- Now, His total income is Rs 4,50,000.
 
 ### Calculate Net taxable income
 After finding the total income, we need to calculate the net taxable income which was when the total income comes after all the deductions.
-Example: 
-    - Raja has Rs 5,00,000 annual salary.
-    - He also has income of Rs 50,000 come from interests in bank deposits.
-    - Now, His total income is Rs 5,50,000.
-    - And according standard deduction of Rs 50,000.Then he has taxable income of 5,00,000.
-    - Also he has the HRA exemption of 25,000. It also deducted from the total income.
-    - Now, His net taxable income = 4,75,000.
+#### Example: 
+- Raja has Rs 5,00,000 annual salary.
+- He also has income of Rs 50,000 come from interests in bank deposits.
+- Now, His total income is Rs 5,50,000.
+- And according standard deduction of Rs 50,000.Then he has taxable income of 5,00,000.
+- Also he has the HRA exemption of 25,000. It also deducted from the total income.
+- Now, His net taxable income = 4,75,000.
 
 ### Compute Income Tax based on slab
 Now we know how to find a net taxable income of a person. With net taxable income, we will find the tax slab rates and calculate it.
@@ -358,4 +361,4 @@ Here, We are selecting form[0], because getElementsByTagName("form") return a ar
 - And finally, we are passing the taxableIncome to the tax calculator to determine the taxAmount according to the slab rates.
 
 # Final Output
-![Income tax calculator](./final-output.png)
+![Income tax calculator](./images/final-output.png)
