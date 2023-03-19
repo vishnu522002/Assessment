@@ -1,8 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function UserPage() {
+  const url = "http://localhost:3000/users";
+
+  let navigate = useNavigate();
+
+  const { index } = useParams();
+
+  const inputRef = useRef(null);
+
   const [user, setUser] = useState({
+    userId: "",
     accountNumber: "",
     accountHolder: "",
     accountType: "",
@@ -20,17 +30,70 @@ export default function UserPage() {
     });
   };
 
+  const loadData = async () => {
+    const users = await axios.get(url).then((res) => {
+      const mainUser = res.data[index];
+
+      setUser({
+        ...user,
+        accountNumber: mainUser.customerAccountNo,
+        accountHolder: mainUser.customerName,
+        accountType: mainUser.customerAccountType,
+        contact: mainUser.customerContact,
+        email: mainUser.customerEmail,
+        password: mainUser.customerPin,
+        userId: mainUser.customerId,
+      });
+    });
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const handleClick = (e) => {
+    setReadOnly(false);
+    inputRef.current.focus();
+  };
+
+  const handleDelete = async () => {
+    alert(
+      "Are you sure you want to delete with account no " + user.accountNumber
+    );
+    navigate("/");
+  };
+
   return (
     <div className="container m-auto row mt-5 d-flex align-items-center col-lg-5">
       <div className="col-8">
         <h1 className="text-start">My Account</h1>
       </div>
       <div className="col-3">
-        <button className="btn btn-outline-primary float-end">Edit</button>
+        <button
+          className="btn btn-outline-primary float-end"
+          onClick={handleClick}
+        >
+          Edit
+        </button>
       </div>
 
       <div id="about-areas" className="row col-auto">
         <form className="row g-3">
+          <div className="col-12 mt-lg-3">
+            <label htmlFor="inputAddress3" className="form-label">
+              User ID
+            </label>
+            <input
+              type="number"
+              className="form-control"
+              id="inputAddress3"
+              name="accountNumber"
+              value={user.userId}
+              onChange={handleChange}
+              readOnly={true}
+              onWheel={(e) => e.target.blur()}
+            />
+          </div>
           <div className="col-12 mt-lg-3">
             <label htmlFor="inputAddress" className="form-label">
               Account No
@@ -58,6 +121,7 @@ export default function UserPage() {
               value={user.accountHolder}
               onChange={handleChange}
               readOnly={readOnly}
+              ref={inputRef}
             />
           </div>
           <div className="col-md-6 mt-lg-4">
@@ -138,14 +202,15 @@ export default function UserPage() {
             <Link
               type="button"
               className="btn btn-outline-info"
-              to={`/transactions/${user.accountNumber}`}
+              to={`/transactions/${index}`}
             >
               View Transactions
             </Link>
-            <button type="submit" className="btn btn-outline-warning">
-              Save
-            </button>
-            <button type="button" className="btn btn-outline-danger">
+            <button
+              type="button"
+              className="btn btn-outline-danger"
+              onClick={handleDelete}
+            >
               Delete account
             </button>
           </div>

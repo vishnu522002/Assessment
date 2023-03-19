@@ -1,16 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MainLayout from "./MainLayout";
-import LandingPage from "./components/LandingPage";
 import LoginPage from "./components/LoginPage";
+import {
+  BrowserRouter as Router,
+  Rou,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
+import MainLayout from "./MainLayout";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route exact path="/login" element={<LoginPage />} />
-          <Route index path="/" element={<LandingPage />} />
+          <Route index path="/" element={<LoginPage />} />
           <Route path="*" element={<MainLayout />} />
         </Routes>
       </Router>
